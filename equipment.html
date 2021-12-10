@@ -1,94 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
     <head>
-        <title>Main Page</title>
+        <title>Equipment Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="assets/css/style.css" rel="stylesheet">
         
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
-    <body>
-        <header class="fixed-top">
+    <body class="d-flex flex-column h-100">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="navbar navbar-expand">
+                    <a class="navbar-brand" href="main.html">
+                        <p style="color:green" class="h1 p-0 m-0 fw-bold">SKKU STUDIO</p>
+                    </a>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0"></ul>
+                        <ul class="navbar-nav flex-row flex-wrap ms-md-auto"></ul>  
+                    </div>
+                    <button type="button" class="btn btn-outline-success btn-lg">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-main mb-5">
             <div class="container">
-                <a class="btn btn-outline-light login_btn" href="signup.html">Login</a>
-                <h1>Studio Management</h1>
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="main.html">Home</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="schedule.html">Schedule</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="equipment.html">Equipment</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled">Management</a>
-                                </li>
-                            </ul>
-                        </div>
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav row flex-fill text-center">
+                            <li class="nav-item col">
+                                <a class="nav-link text-reset" aria-current="page" href="about.html">
+                                    <p class="h5 p-0 m-0">About</p>
+                                </a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link text-reset" href="schedule.html">
+                                    <p class="h5 p-0 m-0">Schedule</p>
+                                </a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link text-reset" href="equipment.html">
+                                    <p class="h5 p-0 m-0">Equipment</p>
+                                </a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link text-reset" href="contact.html">
+                                    <p class="h5 p-0 m-0">Contact</p>
+                                </a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link text-reset">
+                                    <p class="h5 p-0 m-0">Management</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>
-        </header>
+        </div>
 
-        <!-- Masthead-->
-        <header class="back_img">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/studio_img.png" class="card-img-top" alt="...">
-                            <div class="card-header">Equipment name</div>
-                            <div class="card-body">
-                                <a class="btn btn-outline-dark login_btn" href="signup.html">Register</a>
-                                <h5 class="card-title">About equipment</h5>
-                                <p class="card-text">Condition : breakdown</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/studio_img.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a short card.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/studio_img.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="assets/studio_img.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
+        <div class="container mb-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 border-success">
+                        <img src="assets/equip/camera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-outline-success login_btn" href="rental.html">Register</a>
+                            <h5 class="card-title">Camera</h5>
+                            <p class="card-text"><small class="text-muted">Condition : breakdown</small></p>
                         </div>
                     </div>
                 </div>
-
+                <div class="col">
+                    <div class="card h-100 border-success">
+                        <img src="assets/equip/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-outline-success login_btn" href="rental.html">Register</a>
+                            <h5 class="card-title">Computer</h5>
+                            <p class="card-text"><small class="text-muted">Condition : breakdown</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-success">
+                        <img src="assets/equip/gopro.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-outline-success login_btn" href="rental.html">Register</a>
+                            <h5 class="card-title">Go Pro</h5>
+                            <p class="card-text"><small class="text-muted">Condition : breakdown</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-success">
+                        <img src="assets/equip/tablet.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-outline-success login_btn" href="rental.html">Register</a>
+                            <h5 class="card-title">Tablet</h5>
+                            <p class="card-text"><small class="text-muted">Condition : breakdown</small></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </div>
+
+        <footer class="footer mt-auto py-3 bg-success">
+            <div class="container text-center text-white">
+                <span>Copyright @ Kang Miwoo & Lee Jisun</span>
+            </div>
+        </footer>
     </body>
 </html>
