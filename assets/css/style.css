@@ -58,3 +58,12 @@ header.back_img h1, header.back_img .h1 {
 .main_img {
   width: 100%;
 }
+
+.nav-main {
+  background-color: #052c65;
+  color: white;
+}
+
+.nav-item:hover{
+  color: #7f91ad;
+}
