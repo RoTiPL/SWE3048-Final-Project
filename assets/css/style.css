@@ -12,7 +12,6 @@ h1 {
 }
 
 .login_btn {
-  color: white;
   float: right;
   margin: 10px;
 }
@@ -61,7 +60,7 @@ header.back_img h1, header.back_img .h1 {
 }
 
 .nav-main {
-  background-color: #052c65;
+  background-color: rgb(25, 135, 84);
   color: white;
 }
 
