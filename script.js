@@ -29,6 +29,10 @@ $(document).ready(function(){
     init_calendar(date);
     var events = check_events(today, date.getMonth()+1, date.getFullYear());
     show_events(events, months[date.getMonth()], today);
+
+    $("#addEquip").click(function() {location.reload()});
+    $("#saveUser").click(function() {location.reload()});
+    $("#saveRegister").click(function() {location.reload()});
 });
 
 // Initialize the calendar by appending the HTML dates
