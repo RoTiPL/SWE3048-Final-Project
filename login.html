@@ -1,7 +1,8 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
 <!DOCTYPE html>
 <html class="h-100">
     <head>
-        <title>About Page</title>
+        <title>Login Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="assets/css/style.css" rel="stylesheet">
         
@@ -15,7 +16,7 @@
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="navbar navbar-expand">
-                    <a class="navbar-brand" href="main.html">
+                    <a class="navbar-brand" href="main.jsp">
                         <p style="color:green" class="h1 p-0 m-0 fw-bold">SKKU STUDIO</p>
                     </a>
                     <div class="collapse navbar-collapse">
@@ -24,7 +25,7 @@
                     </div>
                     <a type="button" class="btn btn-outline-success btn-lg" style="display: none;" href="login.html">Login</a>
                     <a type="button" class="btn btn-outline-dark btn-lg me-2" href="mypage.html">Mypage</a>
-                    <a type="button" class="btn btn-outline-danger btn-lg">Log out</a>
+                    <a type="button" class="btn btn-outline-danger btn-lg">Log out</a> 
                 </div>
             </div>
         </div>
@@ -35,27 +36,27 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav row flex-fill text-center">
                             <li class="nav-item col">
-                                <a class="nav-link text-reset" aria-current="page" href="about.html">
+                                <a class="nav-link text-reset" aria-current="page" href="about.jsp">
                                     <p class="h5 p-0 m-0">About</p>
                                 </a>
                             </li>
                             <li class="nav-item col">
-                                <a class="nav-link text-reset" href="schedule.html">
+                                <a class="nav-link text-reset" href="schedule.jsp">
                                     <p class="h5 p-0 m-0">Schedule</p>
                                 </a>
                             </li>
                             <li class="nav-item col">
-                                <a class="nav-link text-reset" href="equipment.html">
+                                <a class="nav-link text-reset" href="equipment.jsp">
                                     <p class="h5 p-0 m-0">Equipment</p>
                                 </a>
                             </li>
                             <li class="nav-item col">
-                                <a class="nav-link text-reset" href="contact.html">
+                                <a class="nav-link text-reset" href="contact.jsp">
                                     <p class="h5 p-0 m-0">Contact</p>
                                 </a>
                             </li>
                             <li class="nav-item col">
-                                <a class="nav-link text-reset" href="manage.html">
+                                <a class="nav-link text-reset" href="manage.jsp">
                                     <p class="h5 p-0 m-0">Management</p>
                                 </a>
                             </li>
@@ -68,6 +69,35 @@
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
+                <div class="jumbotron">
+                    <form method="post" action="loginAction.jsp">
+                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6 text-center">
+                                <h2 class="mt-0">Login</h2>
+                                <hr class="divider" />
+                                <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
+                            </div>
+                        </div>
+                        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                            <div class="col-lg-6">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" class="form-control" placeholder="ID" name="userid" maxlength="45">
+                                    <label for="name">Full name</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="text" class="form-control" placeholder="ID" name="userid" maxlength="45">
+                                    <label for="name">Full name</label>
+                                </div>
+                                <div class="input-group form-floating mb-3">
+                                    <input type="password" class="form-control" placeholder="Password" name="password" maxlength="45">
+                                </div>
+                                <input type="submit" class="btn btn-primary form-control" value="Login">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
                         <h2 class="mt-0">Let's Get In Touch!</h2>
@@ -77,19 +107,11 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." />
                                 <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
@@ -140,6 +162,24 @@
                 </div>
             </div>
         </section>
+
+        <div class="container">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="jumbotron" style="padding-top: 20px;">
+                    <form method="post" action="loginAction.jsp">
+                        <h3 style="text-align: center;" class="mb-3">Login</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="ID" name="userid" maxlength="45">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" name="password" maxlength="45">
+                        </div>
+                        <input type="submit" class="btn btn-primary form-control" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer mt-auto py-3 bg-success">
             <div class="container text-center text-white">
