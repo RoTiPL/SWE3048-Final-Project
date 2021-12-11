@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="container mb-5">
+        <!-- <div class="container mb-5">
             <div class="row row-cols-1 row-cols-md-1 g-4">
                 <div class="col">
                     <div class="card h-100 border-success">
@@ -142,54 +142,74 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="container mb-5">
             <div class="row row-cols-1 row-cols-md-1 g-4">
                 <div class="col">
                     <div class="card h-100 border-success">
                         <div class="card-body">
+                            <button type="button" class="btn btn-outline-dark btn-sm login_btn">SAVE</button>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Request List</button>
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">USER</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Rental List</button>
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">REGISTER</button>
                                 </li>
                             </ul>
+                            
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Equipment</th>
-                                                <th scope="col">From</th>
-                                                <th scope="col">To</th>
-                                                <th scope="col">Request date</th>
-                                                <th scope="col">condition</th>
+                                                <th scope="col">Nickname</th>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Password</th>
+                                                <th scope="col">E-mail</th>
+                                                <th scope="col">Authority</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Computer</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>Testing</td>
+                                                <td>admin</td>
+                                                <td>admin</td>
+                                                <td>0000</td>
+                                                <td>aaa@gmail.com</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>admin</option>
+                                                        <option value="1">user</option>
+                                                        <option value="2">guest</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>go Pro</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>Accept</td>
+                                                <td>user</td>
+                                                <td>user</td>
+                                                <td>0000</td>
+                                                <td>aaa@gmail.com</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>user</option>
+                                                        <option value="1">admin</option>
+                                                        <option value="2">guest</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Tablet</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>01/11/2020 12:00 AM</td>
-                                                <td>late</td>
+                                                <td>guest</td>
+                                                <td>guest</td>
+                                                <td>0000</td>
+                                                <td>aaa@gmail.com</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>guest</option>
+                                                        <option value="1">admin</option>
+                                                        <option value="2">user</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -198,31 +218,75 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
+                                                <th scope="col">Nickname</th>
                                                 <th scope="col">Equipment</th>
                                                 <th scope="col">From</th>
                                                 <th scope="col">To</th>
                                                 <th scope="col">Request date</th>
-                                                <th scope="col">condition</th>
+                                                <th scope="col">Request condition</th>
+                                                <th scope="col">Rental condition</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>user</td>
                                                 <td>Computer</td>
                                                 <td>01/11/2020</td>
                                                 <td>01/11/2020</td>
                                                 <td>01/11/2020</td>
-                                                <td>reject</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>testing</option>
+                                                        <option value="1">Accept</option>
+                                                        <option value="2">Reject</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>none</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>go Pro</td>
+                                                <td>user</td>
+                                                <td>Tablet</td>
                                                 <td>01/11/2020</td>
                                                 <td>01/11/2020</td>
                                                 <td>01/11/2020</td>
-                                                <td>done</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>Accept</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>rented</option>
+                                                        <option value="1">done</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>user</td>
+                                                <td>Tablet</td>
+                                                <td>01/11/2020</td>
+                                                <td>01/11/2020</td>
+                                                <td>01/11/2020</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>Accept</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>late</option>
+                                                        <option value="1">done</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
