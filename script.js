@@ -1,7 +1,7 @@
 $(function () { 
     $('#datetimepicker1').datetimepicker({ format: 'L'}); 
     $('#datetimepicker2').datetimepicker({ 
-        // format: 'L', 
+        format: 'L', 
         useCurrent: false 
     }); 
     $("#datetimepicker1").on("change.datetimepicker", function (e) { 
@@ -91,7 +91,7 @@ function days_in_month(month, year) {
 // Event handler for when a date is clicked
 function date_click(event) {
     $(".events-container").show(250);
-    $("#dialog12").hide(250);
+    $("#dialog").hide(250);
     $(".active-date").removeClass("active-date");
     $(this).addClass("active-date");
     show_events(event.data.events, event.data.month, event.data.day);
@@ -100,7 +100,7 @@ function date_click(event) {
 // Event handler for when a month is clicked
 function month_click(event) {
     $(".events-container").show(250);
-    $("#dialog12").hide(250);
+    $("#dialog").hide(250);
     var date = event.data.date;
     $(".active-month").removeClass("active-month");
     $(this).addClass("active-month");
@@ -111,7 +111,7 @@ function month_click(event) {
 
 // Event handler for when the year right-button is clicked
 function next_year(event) {
-    $("#dialog12").hide(250);
+    $("#dialog").hide(250);
     var date = event.data.date;
     var new_year = date.getFullYear()+1;
     $("year").html(new_year);
@@ -121,7 +121,7 @@ function next_year(event) {
 
 // Event handler for when the year left-button is clicked
 function prev_year(event) {
-    $("#dialog12").hide(250);
+    $("#dialog").hide(250);
     var date = event.data.date;
     var new_year = date.getFullYear()-1;
     $("year").html(new_year);
@@ -139,15 +139,15 @@ function new_event(event) {
         $(this).removeClass("error-input");
     })
     // empty inputs and hide events
-    $("#dialog12 input[type=text]").val('');
-    $("#dialog12 input[type=number]").val('');
+    $("#dialog input[type=text]").val('');
+    $("#dialog input[type=number]").val('');
     $(".events-container").hide(250);
-    $("#dialog12").show(250);
+    $("#dialog").show(250);
     // Event handler for cancel button
     $("#cancel-button").click(function() {
         $("#name").removeClass("error-input");
         $("#count").removeClass("error-input");
-        $("#dialog12").hide(250);
+        $("#dialog").hide(250);
         $(".events-container").show(250);
     });
     // Event handler for ok button
@@ -164,7 +164,7 @@ function new_event(event) {
             $("#count").addClass("error-input");
         }
         else {
-            $("#dialog12").hide(250);
+            $("#dialog").hide(250);
             console.log("new event");
             new_event_json(name, count, date, day);
             date.setDate(day);
