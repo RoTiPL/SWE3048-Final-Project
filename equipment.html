@@ -77,7 +77,7 @@
                     <div class="card h-100 border-success">
                         <img src="assets/equip/camera.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#RentalModal">Register</a>
+                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#Camera">Register</a>
                             <h5 class="card-title">Camera</h5>
                             <p class="card-text"><small class="text-muted">Condition : breakdown</small></p>
                         </div>
@@ -87,7 +87,7 @@
                     <div class="card h-100 border-success">
                         <img src="assets/equip/computer.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#RentalModal">Register</a>
+                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#Computer">Register</a>
                             <h5 class="card-title">Computer</h5>
                             <p class="card-text"><small class="text-muted">Condition : available</small></p>
                         </div>
@@ -97,7 +97,7 @@
                     <div class="card h-100 border-success">
                         <img src="assets/equip/gopro.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#RentalModal">Register</a>
+                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#Go Pro">Register</a>
                             <h5 class="card-title">Go Pro</h5>
                             <p class="card-text"><small class="text-muted">Condition : available</small></p>
                         </div>
@@ -107,7 +107,7 @@
                     <div class="card h-100 border-success">
                         <img src="assets/equip/tablet.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#RentalModal">Register</a>
+                            <a class="btn btn-outline-success login_btn" data-bs-toggle="modal" data-bs-target="#Tablet">Register</a>
                             <h5 class="card-title">Tablet</h5>
                             <p class="card-text"><small class="text-muted">Condition : rented</small></p>
                         </div>
@@ -120,7 +120,7 @@
         </div>
 
         <!-- Register Modal -->
-        <div class="modal fade" id="RentalModal" tabindex="-1" aria-labelledby="RentalModalLabel" aria-hidden="true">
+        <div class="modal fade" id="Camera" tabindex="-1" aria-labelledby="RentalModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -164,6 +164,51 @@
             </div>
             </div>
         </div>
+        <div class="modal fade" id="Computer" tabindex="-1" aria-labelledby="RentalModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="RentalModalLabel">Rent</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <img src="assets/equip/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Computer</h5>
+                            <p class="card-text"><small class="text-muted">Condition : available</small></p>
+                        </div>
+                    </div>
+                    <div class='col-md-7 start-150 mx-auto'> 
+                        <div class="form-group"> 
+                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest"> 
+                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" value="01/11/2020">
+                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker"> 
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <p class='text-center'>~</p>
+                    <div class='col-md-7 start-50 mx-auto'> 
+                        <div class="form-group"> 
+                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest"> 
+                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" value="01/15/2020"> 
+                                <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker"> 
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
 
         <!-- Add Equipment Modal -->
         <div class="modal fade" id="addEquipModal" tabindex="-1" aria-labelledby="addEquipModalLabel" aria-hidden="true">

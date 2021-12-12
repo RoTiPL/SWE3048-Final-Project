@@ -11,6 +11,13 @@ h1 {
   float: right;
   margin: 10px;
 }
+.float_img {
+  float: left;
+}
+.not_float {
+  clear: both;
+}
+
 header.back_img {
   padding-top: 10rem;
   padding-bottom: 74rem;
