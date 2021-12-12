@@ -30,18 +30,18 @@ $(document).ready(function(){
     var events = check_events(today, date.getMonth()+1, date.getFullYear());
     show_events(events, months[date.getMonth()], today);
 
-    // $("#saveUser").click(function() {location.reload()});
-    // $("#saveRegister").click(function() {location.reload()});
-    // $("#saveEquipState").click(function() {location.reload()});
+    $("#saveUser").click(function() {location.reload()});
+    $("#saveRegister").click(function() {location.reload()});
+    $("#saveEquipState").click(function() {location.reload()});
 
-    // var forms = document.querySelectorAll('.needs-validation')
+    var forms = document.querySelectorAll('.needs-validation')
 
-    // $("#customFile").on("change", handleImgsFilesSelect);
-    // $("#addEquipBtn").click(function() {
-    //     // downloadImg();
-    //     // alert("hello");
-    //     location.reload()
-    // });
+    $("#customFile").on("change", handleImgsFilesSelect);
+    $("#addEquipBtn").click(function() {
+        // downloadImg();
+        // alert("hello");
+        location.reload()
+    });
 
 //   // Loop over them and prevent submission
 //     Array.prototype.slice.call(forms)
