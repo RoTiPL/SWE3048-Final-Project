@@ -33,6 +33,7 @@ $(document).ready(function(){
     $("#addEquipBtn").click(function() {location.reload()});
     $("#saveUser").click(function() {location.reload()});
     $("#saveRegister").click(function() {location.reload()});
+    $("#saveEquipState").click(function() {location.reload()});
 });
 
 // Initialize the calendar by appending the HTML dates

@@ -80,6 +80,9 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">REGISTER</button>
                                 </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="equip-tab" data-bs-toggle="tab" data-bs-target="#equip" type="button" role="tab" aria-controls="equip" aria-selected="false">Rental List</button>
+                                </li>
                             </ul>
                             
                             <div class="tab-content" id="myTabContent">
@@ -150,7 +153,7 @@
                                                 <th scope="col">To</th>
                                                 <th scope="col">Request date</th>
                                                 <th scope="col">Request condition</th>
-                                                <th scope="col">Rental condition</th>
+                                                <!-- <th scope="col">Rental condition</th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -167,11 +170,11 @@
                                                         <option value="2">Reject</option>
                                                     </select>
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                                                         <option selected>none</option>
                                                     </select>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                             <tr>
                                                 <td>user</td>
@@ -184,12 +187,12 @@
                                                         <option selected>Accept</option>
                                                     </select>
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                                                         <option selected>rented</option>
                                                         <option value="1">done</option>
                                                     </select>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                             <tr>
                                                 <td>user</td>
@@ -202,12 +205,12 @@
                                                         <option selected>Accept</option>
                                                     </select>
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                                                         <option selected>late</option>
                                                         <option value="1">done</option>
                                                     </select>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         </tbody>
                                     </table>
@@ -215,7 +218,55 @@
                                         <a type="button" class="btn btn-outline-dark btn-sm login_btn" id="saveRegister">SAVE</a>
                                     </div>
                                 </div>
-                                
+                                <div class="tab-pane fade" id="equip" role="tabpanel" aria-labelledby="equip-tab">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Equipment</th>
+                                                <th scope="col">condition</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Camera</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>breakdown</option>
+                                                        <option value="1">available</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Computer</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>available</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Go Pro</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>available</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>tablet</td>
+                                                <td>
+                                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                        <option selected>rented</option>
+                                                        <option value="1">available</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>
+                                        <a type="button" class="btn btn-outline-dark btn-sm login_btn" id="saveEquipState">SAVE</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -235,6 +286,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="rental-tab" data-bs-toggle="tab" data-bs-target="#rental" type="button" role="tab" aria-controls="rental" aria-selected="false">Rental List</button>
                                 </li>
+                                
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="request" role="tabpanel" aria-labelledby="request-tab">
@@ -302,6 +354,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
