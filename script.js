@@ -12,11 +12,82 @@ $(function () {
     }); 
 });
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+function contact_update(){ // for contact cases
+    var regExp = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/; // for email
+    var regPas = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/; // for password
+
+    if($('#name').val() == ''){
+        alert("No name!")
+    }
+
+    else if($('#email').val() == ''){
+        alert("No email!")
+    } else if(!regExp.test($('#alert("No name!")').val())){
+        alert("wrong email")
+    }
+
+    else if($('#tel').val() == ''){
+        alert("No tel!")
+    } 
+
+    else if($('#message').val() == ''){
+        alert("No message!")
+    } 
+}
+
+function login_update(){ // for contact cases
+    if($('#ID').val() == ''){
+        alert("No ID!")
+    }
+
+    else if($('#Password').val() == ''){
+        alert("No Password!")
+    }
+}
+
+function signup_update(){ // for contact cases
+    var regExp = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/; // for email
+    var regPas = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/; // for password
+
+    if($('#Email').val() == ''){
+        alert("No email!")
+    } else if(!regExp.test($('#Email').val())){
+        alert("wrong email")
+    }
+
+    else if($('#ID').val() == ''){
+        alert("No ID!")
+    } 
+
+    else if($('#Password').val() == ''){
+        alert("No Password!")
+    } 
+
+    else if($('#Password2').val() == ''){
+        alert("No Password check!")
+    } else if($('#Password2').val() != $('#Password').val()){
+        alert("different password!")
+    } 
+    else {
+        location.href = " login.html"
+    }
+}
 
 // var sel_file;
 
 // Setup the calendar with the current date
 $(document).ready(function(){
+    $("#submitButton").click(function(){
+        contact_update();
+    })
+    $("#loginButton").click(function(){
+        login_update();
+    })
+    $("#signupButton").click(function(){
+        signup_update();
+    })
+
     var date = new Date();
     var today = date.getDate();
     // Set click handlers for DOM elements
