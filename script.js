@@ -13,7 +13,7 @@ $(function () {
 });
 
 
-var sel_file;
+// var sel_file;
 
 // Setup the calendar with the current date
 $(document).ready(function(){
@@ -30,18 +30,18 @@ $(document).ready(function(){
     var events = check_events(today, date.getMonth()+1, date.getFullYear());
     show_events(events, months[date.getMonth()], today);
 
-    $("#saveUser").click(function() {location.reload()});
-    $("#saveRegister").click(function() {location.reload()});
-    $("#saveEquipState").click(function() {location.reload()});
+    // $("#saveUser").click(function() {location.reload()});
+    // $("#saveRegister").click(function() {location.reload()});
+    // $("#saveEquipState").click(function() {location.reload()});
 
-    var forms = document.querySelectorAll('.needs-validation')
+    // var forms = document.querySelectorAll('.needs-validation')
 
-    $("#customFile").on("change", handleImgsFilesSelect);
-    $("#addEquipBtn").click(function() {
-        // downloadImg();
-        // alert("hello");
-        location.reload()
-    });
+    // $("#customFile").on("change", handleImgsFilesSelect);
+    // $("#addEquipBtn").click(function() {
+    //     // downloadImg();
+    //     // alert("hello");
+    //     location.reload()
+    // });
 
 //   // Loop over them and prevent submission
 //     Array.prototype.slice.call(forms)
@@ -57,49 +57,49 @@ $(document).ready(function(){
 //     })
 });
 
-// Show imagefile at add equipment image
-function handleImgsFilesSelect(e) {
-    var files = e.target.files;
-    var filesArr = Array.prototype.slice.call(files);
+// // Show imagefile at add equipment image
+// function handleImgsFilesSelect(e) {
+//     var files = e.target.files;
+//     var filesArr = Array.prototype.slice.call(files);
 
-    filesArr.forEach(function(f) {
-        if(!f.type.match("image.*")) {
-            alert("It is not image file");
-            return;
-        }
+//     filesArr.forEach(function(f) {
+//         if(!f.type.match("image.*")) {
+//             alert("It is not image file");
+//             return;
+//         }
 
-        sel_files = f;
+//         sel_files = f;
 
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            $("#img").attr("src", e.target.result);
-        }
-        reader.readAsDataURL(f);
-    });
-}
+//         var reader = new FileReader();
+//         reader.onload = function(e) {
+//             $("#img").attr("src", e.target.result);
+//         }
+//         reader.readAsDataURL(f);
+//     });
+// }
 
-// For download image file at add equipment image
-function downloadImg(){
-    const imageInput = $("#customFile")[0];
-    console.log("imageInput: ", imageInput.files)
+// // For download image file at add equipment image
+// function downloadImg(){
+//     const imageInput = $("#customFile")[0];
+//     console.log("imageInput: ", imageInput.files)
 
-    const formData = new FormData();
-    formData.append("image", imageInput.files[0]);
+//     const formData = new FormData();
+//     formData.append("image", imageInput.files[0]);
 
-    $.ajax({ 
-        type: 'POST', 
-        url: 'assets/equip', 
-        processData: false, // 필수 
-        contentType: false, // 필수 
-        data: formData, 
-        success: function(rtn){
-            console.log("message: ", rtn)
-          },
-          err: function(err){
-            console.log("err:", err)
-          }
-    });
-}
+//     $.ajax({ 
+//         type: 'POST', 
+//         url: 'assets/equip', 
+//         processData: false, // 필수 
+//         contentType: false, // 필수 
+//         data: formData, 
+//         success: function(rtn){
+//             console.log("message: ", rtn)
+//           },
+//           err: function(err){
+//             console.log("err:", err)
+//           }
+//     });
+// }
 
 // Initialize the calendar by appending the HTML dates
 function init_calendar(date) {
@@ -265,7 +265,7 @@ function show_events(events, month, day) {
     if(events.length===0) {
         var event_card = $("<div class='event-card'></div>");
         var event_name = $("<div class='event-name'>There are no events planned for "+month+" "+day+".</div>");
-        $(event_card).css({ "border-left": "10px solid #FF1744" });
+        $(event_card).css({ "border-left": "10px solid rgb(24, 255, 147)" });
         $(event_card).append(event_name);
         $(".events-container").append(event_card);
     }
