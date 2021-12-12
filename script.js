@@ -30,7 +30,7 @@ $(document).ready(function(){
     var events = check_events(today, date.getMonth()+1, date.getFullYear());
     show_events(events, months[date.getMonth()], today);
 
-    $("#addEquip").click(function() {location.reload()});
+    $("#addEquipBtn").click(function() {location.reload()});
     $("#saveUser").click(function() {location.reload()});
     $("#saveRegister").click(function() {location.reload()});
 });

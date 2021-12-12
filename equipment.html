@@ -115,11 +115,11 @@
                 </div>
             </div>
             <div class="login_btn">
-                <a type="button" class="btn circle_btn btn-success btn-lg mt-3" id="addEquip">+</a>
+                <a type="button" class="btn circle_btn btn-success btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#addEquipModal">+</a>
             </div>
         </div>
 
-        <!-- Modal -->
+        <!-- Register Modal -->
         <div class="modal fade" id="RentalModal" tabindex="-1" aria-labelledby="RentalModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -160,6 +160,34 @@
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Add Equipment Modal -->
+        <div class="modal fade" id="addEquipModal" tabindex="-1" aria-labelledby="addEquipModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="addEquipModalLabel">Add New Equipment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 mb-3">
+                        <label for="inputEquipName" class="form-label">Equipment Name</label>
+                        <input type="text" class="form-control" id="inputEquipName" placeholder="Name">
+                    </div>
+                    <form>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">파일선택</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a type="button" class="btn btn-primary" data-bs-dismiss="modal" id="addEquipBtn">Add</a>
                 </div>
             </div>
             </div>
